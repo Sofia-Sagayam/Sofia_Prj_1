@@ -18,7 +18,7 @@ public void instantiate(){
 }
 @Test
 public void sampleTest(){
-	Map<Integer,String> resultSet=controller.callProcessor("select sum(Salary),sum(Empid) from CsvDB.csv");
+	Map<Integer,String> resultSet=controller.callProcessor("select sum(Salary),avg(empid) from F:\\DT-3\\CsvDB.csv where Salary>30000 OR Salary<30000 AND City=Bangalore");
 	assertNotNull(resultSet);
 	show("test", resultSet);
 }
